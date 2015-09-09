@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="932" y="317"/>
         </scene>
-        <!--View Controller-->
+        <!--ArrayCollectionViewDataSource-->
         <scene sceneID="rGK-E8-qOV">
             <objects>
-                <viewController id="avA-kN-r9H" sceneMemberID="viewController">
+                <viewController id="avA-kN-r9H" customClass="APArrayCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="28A-vW-G9b"/>
                         <viewControllerLayoutGuide type="bottom" id="tIc-bf-5Zb"/>
@@ -75,9 +75,53 @@
                     <view key="view" contentMode="scaleToFill" id="9NI-07-bcw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qB-QIN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bvn-79-Gts">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="APSimpleCollectionViewCell" id="Xof-EK-lbR" customClass="APSimpleCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgG-U1-kkh">
+                                                    <rect key="frame" x="0.0" y="41" width="100" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="CgG-U1-kkh" firstAttribute="leading" secondItem="Xof-EK-lbR" secondAttribute="leading" id="1ZW-0l-96c"/>
+                                            <constraint firstAttribute="centerY" secondItem="CgG-U1-kkh" secondAttribute="centerY" id="UDx-Ic-EHf"/>
+                                            <constraint firstAttribute="trailing" secondItem="CgG-U1-kkh" secondAttribute="trailing" id="oRj-Yf-4xg"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="textLabel" destination="CgG-U1-kkh" id="2cG-1K-ZE4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ahs-ZM-6yJ"/>
+                    <navigationItem key="navigationItem" title="ArrayCollectionViewDataSource" id="Ahs-ZM-6yJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="naq-qB-QIN" id="c57-zm-cgB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNo-bY-rlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +130,7 @@
         <!--ArrayTableViewDataSource-->
         <scene sceneID="d6Q-Bc-R3G">
             <objects>
-                <viewController id="Zb2-32-bW5" customClass="APViewController" sceneMemberID="viewController">
+                <viewController id="Zb2-32-bW5" customClass="APArrayTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0fR-TT-1r8"/>
                         <viewControllerLayoutGuide type="bottom" id="hzq-KE-Xah"/>

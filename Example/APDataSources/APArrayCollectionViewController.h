@@ -4,12 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <APDataSources/APCellProtocol.h>
 
 
 
-@interface APSimpleTableViewCell : UITableViewCell <APCellProtocol>
-
-
-+ (NSString *)reuseIdentifier;
+@interface APArrayCollectionViewController : UIViewController
 @end

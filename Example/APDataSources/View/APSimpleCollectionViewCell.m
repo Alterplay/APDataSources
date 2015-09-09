@@ -3,12 +3,22 @@
 // Copyright (c) 2015 Nickolay Sheika. All rights reserved.
 //
 
-#import "APSimpleTableViewCell.h"
+#import "APSimpleCollectionViewCell.h"
 #import "APSimpleModel.h"
 
 
 
-@implementation APSimpleTableViewCell
+@interface APSimpleCollectionViewCell ()
+
+
+@property(weak, nonatomic) IBOutlet UILabel *textLabel;
+
+
+@end
+
+
+
+@implementation APSimpleCollectionViewCell
 
 
 + (NSString *)reuseIdentifier

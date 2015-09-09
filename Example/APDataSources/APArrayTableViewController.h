@@ -1,5 +1,5 @@
 //
-//  APViewController.h
+//  APArrayTableViewController.h
 //  APDataSources
 //
 //  Created by Nickolay Sheika on 09/09/2015.
@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface APViewController : UIViewController
+@interface APArrayTableViewController : UIViewController
 
 @end

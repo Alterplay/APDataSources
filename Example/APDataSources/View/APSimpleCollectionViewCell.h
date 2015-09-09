@@ -8,8 +8,9 @@
 
 
 
-@interface APSimpleTableViewCell : UITableViewCell <APCellProtocol>
+@interface APSimpleCollectionViewCell : UICollectionViewCell <APCellProtocol>
 
 
 + (NSString *)reuseIdentifier;
+
 @end

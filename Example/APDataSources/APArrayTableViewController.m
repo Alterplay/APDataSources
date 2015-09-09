@@ -1,5 +1,5 @@
 //
-//  APViewController.m
+//  APArrayTableViewController.m
 //  APDataSources
 //
 //  Created by Nickolay Sheika on 09/09/2015.
@@ -7,13 +7,13 @@
 //
 
 #import <APDataSources/APArrayTableViewDataSource.h>
-#import "APViewController.h"
+#import "APArrayTableViewController.h"
 #import "APSimpleModel.h"
 #import "APSimpleTableViewCell.h"
 
 
 
-@interface APViewController ()
+@interface APArrayTableViewController ()
 
 
 @property(weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,7 +23,7 @@
 
 
 
-@implementation APViewController
+@implementation APArrayTableViewController
 
 
 - (void)viewDidLoad
@@ -42,7 +42,7 @@
     NSArray *items = @[ simpleModel1, simpleModel2, simpleModel3 ];
 
     self.dataSource = [[APArrayTableViewDataSource alloc] initWithItems:items];
-    self.dataSource.cellReuseIdentifier = [APSimpleTableViewCell cellIdentifier];
+    self.dataSource.cellReuseIdentifier = [APSimpleTableViewCell reuseIdentifier];
     self.tableView.dataSource = self.dataSource;
 }
 
