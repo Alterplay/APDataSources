@@ -3,11 +3,11 @@
 //  Copyright (c) 2015 Alterplay. All rights reserved.
 //
 
-#import "ZMLEditableArrayTableViewDataSource.h"
+#import "APEditableArrayTableViewDataSource.h"
 
 
 
-@implementation ZMLEditableArrayTableViewDataSource
+@implementation APEditableArrayTableViewDataSource
 
 
 - (instancetype)initWithItems:(NSArray *)items

@@ -5,11 +5,11 @@
 
 #import "APArrayTableViewDataSource.h"
 
-@protocol ZMLEditableArrayTableViewDataSourceDelegate;
+@protocol APEditableArrayTableViewDataSourceDelegate;
 
 
 
-@interface ZMLEditableArrayTableViewDataSource : APArrayTableViewDataSource
+@interface APEditableArrayTableViewDataSource : APArrayTableViewDataSource
 
 
 /**
@@ -18,19 +18,19 @@
  *  @param items        NSArray
  *  @param allowEditing BOOL
  *
- *  @return ZMLEditableArrayTableViewDataSource
+ *  @return APEditableArrayTableViewDataSource
  */
 - (instancetype)initWithItems:(NSArray *)items
                  allowEditing:(BOOL)allowEditing;
 
-@property(nonatomic, weak) id <ZMLEditableArrayTableViewDataSourceDelegate> editingDelegate;
+@property(nonatomic, weak) id <APEditableArrayTableViewDataSourceDelegate> editingDelegate;
 @property(nonatomic, readonly) BOOL editingAllowed;
 
 @end
 
 
 
-@protocol ZMLEditableArrayTableViewDataSourceDelegate <NSObject>
+@protocol APEditableArrayTableViewDataSourceDelegate <NSObject>
 
 
 /**
