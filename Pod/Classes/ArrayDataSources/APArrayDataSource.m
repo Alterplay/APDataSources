@@ -45,11 +45,6 @@
     return [self.items count] > 0 ? 1 : 0;
 }
 
-- (NSUInteger)objectsCountInSection:(NSUInteger)section
-{
-    return [[self objectsInSection:section] count];
-}
-
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.items[(NSUInteger) indexPath.row];

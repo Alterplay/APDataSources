@@ -25,15 +25,6 @@
 - (NSUInteger)sectionsCount;
 
 /**
- *  Count of objects in section
- *
- *  @param section number
- *
- *  @return NSUInteger count
- */
-- (NSUInteger)objectsCountInSection:(NSUInteger)section;
-
-/**
  *  Array of objects in section
  *
  *  @param section number

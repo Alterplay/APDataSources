@@ -36,7 +36,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return [self objectsCountInSection:(NSUInteger) section];
+    return [[self objectsInSection:(NSUInteger) section] count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

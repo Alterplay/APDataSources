@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553874845F4EC7DA988615 /* APSimpleModel.m */; };
 		E133EC579954ED5477B1B8AA /* Pods_APDataSources_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92A3AA0A5A8D7D114700011 /* Pods_APDataSources_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		8D7AA13C66C4B091770BD832 /* Pods-APDataSources_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Tests/Pods-APDataSources_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A92A3AA0A5A8D7D114700011 /* Pods_APDataSources_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APDataSources_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F79A8735A27AFCC3298C42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B6553874845F4EC7DA988615 /* APSimpleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleModel.m; sourceTree = "<group>"; };
+		B6553BE01F859529F0C7097C /* APSimpleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleModel.h; sourceTree = "<group>"; };
 		C58B4B864D352FDC735C1BEB /* Pods-APDataSources_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F293FA2AF2D6CB320B8FCD3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +151,7 @@
 				6003F5A6195388D20070C39A /* APViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				B6553EC0E0BD3BB41086817C /* Model */,
 			);
 			name = "Example for APDataSources";
 			path = APDataSources;
@@ -191,6 +195,15 @@
 				F293FA2AF2D6CB320B8FCD3B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B6553EC0E0BD3BB41086817C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6553874845F4EC7DA988615 /* APSimpleModel.m */,
+				B6553BE01F859529F0C7097C /* APSimpleModel.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +406,7 @@
 				6003F59E195388D20070C39A /* APAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* APViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

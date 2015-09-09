@@ -15,11 +15,6 @@
     return 0;
 }
 
-- (NSUInteger)objectsCountInSection:(NSUInteger)section
-{
-    return 0;
-}
-
 - (NSArray *)objectsInSection:(NSUInteger)section
 {
     return nil;

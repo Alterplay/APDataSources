@@ -7,23 +7,33 @@
 //
 
 #import "APViewController.h"
+#import "APSimpleModel.h"
+
 
 @interface APViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
+
+
 @implementation APViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    APSimpleModel *simpleModel1 = [APSimpleModel new];
+    simpleModel1.city = @"New York";
+
+    APSimpleModel *simpleModel2 = [APSimpleModel new];
+    simpleModel2.city = @"San Francisco";
+
+    APSimpleModel *simpleModel3 = [APSimpleModel new];
+    simpleModel3.city = @"Los Angeles";
+
+    [[APArrayTableViewDataSource alloc] init]
 }
 
 @end

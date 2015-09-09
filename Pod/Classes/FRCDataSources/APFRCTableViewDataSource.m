@@ -77,16 +77,12 @@
     }
 }
 
-#pragma mark -
-#pragma mark - Private
-#pragma mark -
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [self objectsCountInSection:(NSUInteger) section];
+    return [[self objectsInSection:(NSUInteger) section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView

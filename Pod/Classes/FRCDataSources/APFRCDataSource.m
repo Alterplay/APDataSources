@@ -51,11 +51,6 @@
     return objectsCount;
 }
 
-- (NSUInteger)objectsCountInSection:(NSUInteger)section
-{
-    return [[self.fetchedResultsController objectsInSection:section] count];
-}
-
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
