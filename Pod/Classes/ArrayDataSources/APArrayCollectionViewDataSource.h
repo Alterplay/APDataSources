@@ -5,7 +5,7 @@
 
 #import "APArrayDataSource.h"
 
-static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementaryViewIdentifier";
+
 
 @protocol APArrayCollectionViewDataSourceDelegate;
 

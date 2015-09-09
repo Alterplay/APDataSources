@@ -5,6 +5,8 @@
 
 #import "APFRCCollectionViewDataSource.h"
 
+static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementaryViewIdentifier";
+
 
 
 @interface APFRCCollectionViewDataSource ()
@@ -33,7 +35,8 @@
 
         _collectionView = collectionView;
         _collectionView.dataSource = self;
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+        [_collectionView registerClass:[UICollectionReusableView class]
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:APDummySupplementaryViewIdentifier];
 
         [fetchedResultsController performFetch:nil];
@@ -89,13 +92,10 @@
     id model = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
     if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:withObject:)]) {
-
         /* Custom cell configuration */
         [self.delegate configureCell:collectionViewCell atIndexPath:indexPath withObject:model];
-
     }
     else {
-
         /* Default cell configuration */
         [collectionViewCell reloadWithModel:model atIndexPath:indexPath];
     }
@@ -131,7 +131,7 @@
     return reusableView;
 }
 
-#pragma mark NSFetchedResultsControllerDelegate
+#pragma mark - NSFetchedResultsControllerDelegate
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {

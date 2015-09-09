@@ -7,7 +7,7 @@
 #import "APFRCDataSource.h"
 #import "APUpdatableDataSourceDelegate.h"
 
-static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementaryViewIdentifier";
+
 
 @protocol APFRCCollectionViewDataSourceDelegate;
 

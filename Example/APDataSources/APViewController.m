@@ -6,13 +6,19 @@
 //  Copyright (c) 2015 Nickolay Sheika. All rights reserved.
 //
 
+#import <APDataSources/APArrayTableViewDataSource.h>
 #import "APViewController.h"
 #import "APSimpleModel.h"
+#import "APSimpleTableViewCell.h"
+
 
 
 @interface APViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic, strong) APArrayTableViewDataSource *dataSource;
 @end
 
 
@@ -33,7 +39,11 @@
     APSimpleModel *simpleModel3 = [APSimpleModel new];
     simpleModel3.city = @"Los Angeles";
 
-    [[APArrayTableViewDataSource alloc] init]
+    NSArray *items = @[ simpleModel1, simpleModel2, simpleModel3 ];
+
+    self.dataSource = [[APArrayTableViewDataSource alloc] initWithItems:items];
+    self.dataSource.cellReuseIdentifier = [APSimpleTableViewCell cellIdentifier];
+    self.tableView.dataSource = self.dataSource;
 }
 
 @end
