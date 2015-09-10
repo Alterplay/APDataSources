@@ -4,6 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APBaseDataSourceDelegate.h"
+
+@protocol APDataSource;
 
 
 
@@ -17,16 +20,16 @@
  *
  *  @param dataSource - self instance
  */
-- (void)dataSourceDidChanged:(id)dataSource;
+- (void)dataSourceDidChanged:(id <APDataSource>)dataSource;
 
 /**
  *  Notifies the delegate about object deletion
  *
- *  @param dataSource d
+ *  @param dataSource
  *  @param object
  *  @param indexPath  
  */
-- (void)dataSource:(id)dataSource
+- (void)dataSource:(id <APDataSource>)dataSource
    didDeleteObject:(id)object
        atIndexPath:(NSIndexPath *)indexPath;
 

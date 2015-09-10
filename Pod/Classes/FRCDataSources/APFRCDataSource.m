@@ -29,6 +29,8 @@
     return self.fetchedResultsController.sections[(NSUInteger) section];
 }
 
+#pragma mark - APDataSource
+
 - (NSArray *)objectsInSection:(NSUInteger)section
 {
     return [self.fetchedResultsController objectsInSection:section];
@@ -39,16 +41,9 @@
     return [self.fetchedResultsController.sections count];
 }
 
-- (NSUInteger)objectsCount
+- (NSUInteger)allObjectsCount
 {
-    NSUInteger sectionsCount = [self.fetchedResultsController.sections count];
-    NSUInteger objectsCount = 0;
-    for (NSInteger i = 0; i < sectionsCount; i ++) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[(NSUInteger) i];
-        objectsCount += [sectionInfo numberOfObjects];
-    }
-
-    return objectsCount;
+    return [self.fetchedResultsController.sections.valueForKeyPath:@"@sum.numberOfObjects"];
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath

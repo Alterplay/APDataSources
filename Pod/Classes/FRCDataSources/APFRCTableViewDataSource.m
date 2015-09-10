@@ -58,10 +58,6 @@
                                   delegate:nil];
 }
 
-#pragma mark -
-#pragma mark - Public
-#pragma mark -
-
 #pragma mark - Pausing
 
 - (void)setPaused:(BOOL)paused

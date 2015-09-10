@@ -4,28 +4,28 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APBaseDataSource.h"
-#import "APUpdatableDataSourceDelegate.h"
-#import "NSFetchedResultsController+Additions.h"
+#import <CoreData/CoreData.h>
+#import "APDataSource.h"
 
 
 
-@interface APFRCDataSource : APBaseDataSource <NSFetchedResultsControllerDelegate>
+@interface APFRCDataSource : NSObject <APDataSource, NSFetchedResultsControllerDelegate>
 
 
 /**
  * Data source FetchedResultsController
  *
- * Should be settled in designated initializer
+ * Should be set in designated initializer
  *
  */
-@property(nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property(nonatomic, strong, readonly) NSFetchedResultsController *fetchedResultsController;
 
 
 /**
  *  Pause/Resume observe changes in datasource
  */
 @property(nonatomic, assign, getter = isPaused) BOOL paused;
+
 
 /**
  *  Designated initializer
@@ -34,7 +34,7 @@
  *
  *  @return instance
  */
-- (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
+- (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Represents section at index
@@ -45,11 +45,14 @@
  */
 - (id <NSFetchedResultsSectionInfo>)sectionAtIndex:(NSInteger)section;
 
-/**
- *  Objects count based on 'numberOfObjects' property of the section info
- *
- *  @return NSUInteger real objects count, updated on FRC updates
- */
-- (NSUInteger)objectsCount;
+@end
+
+
+
+@interface APFRCDataSource (Unavailable)
+
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end

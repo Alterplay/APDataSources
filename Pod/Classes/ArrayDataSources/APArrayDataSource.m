@@ -40,6 +40,11 @@
     return self.items;
 }
 
+- (NSUInteger)allObjectsCount
+{
+    return [self.items count];
+}
+
 - (NSUInteger)sectionsCount
 {
     return [self.items count] > 0 ? 1 : 0;

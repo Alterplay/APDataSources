@@ -17,6 +17,13 @@
 - (NSUInteger)sectionsCount;
 
 /**
+ *  Count of all objects in all sections together
+ *
+ *  @return NSUInteger count
+ */
+- (NSUInteger)allObjectsCount;
+
+/**
  *  Array of objects in section
  *
  *  @param section number
