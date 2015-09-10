@@ -104,10 +104,10 @@
     /* Fetch object */
     id model = [self objectAtIndexPath:indexPath];
 
-    if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:withObject:)]) {
+    if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:withModel:)]) {
 
         /* Custom cell configuration */
-        [self.delegate configureCell:tableViewCell atIndexPath:indexPath withObject:model];
+        [self.delegate configureCell:tableViewCell atIndexPath:indexPath withModel:model];
 
     }
     else {

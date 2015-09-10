@@ -10,7 +10,7 @@
 @interface APArrayDataSource ()
 
 
-@property(nonatomic, strong) NSArray *items;
+@property(nonatomic, copy, readwrite) NSArray *items;
 @end
 
 
@@ -24,12 +24,12 @@
 {
     self = [super init];
     if (self) {
-        _items = [items copy];
+        self.items = items;
     }
     return self;
 }
 
-#pragma mark - Public
+#pragma mark - APDataSource
 
 - (NSArray *)objectsInSection:(NSUInteger)section
 {

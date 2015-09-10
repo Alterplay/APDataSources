@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @class APBaseDataSource;
+@protocol APCellProtocol;
 
 
 
@@ -25,7 +26,7 @@
  *  @return NSString reuseIdentifier
  */
 - (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath
-                                 inDataSource:(APBaseDataSource *)dataSource;
+                                 inDataSource:(id <APDataSource> *)dataSource;
 
 /**
  *  If method implemented, delegate can configurate cell at its discretion
@@ -38,6 +39,6 @@
  */
 - (void)configureCell:(id <APCellProtocol>)listViewCell
           atIndexPath:(NSIndexPath *)indexPath
-           withObject:(id)object;
+            withModel:(id)object;
 
 @end

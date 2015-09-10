@@ -26,7 +26,7 @@
 
 - (id <NSFetchedResultsSectionInfo>)sectionAtIndex:(NSInteger)section
 {
-    return self.fetchedResultsController.sections[section];
+    return self.fetchedResultsController.sections[(NSUInteger) section];
 }
 
 - (NSArray *)objectsInSection:(NSUInteger)section
@@ -44,7 +44,7 @@
     NSUInteger sectionsCount = [self.fetchedResultsController.sections count];
     NSUInteger objectsCount = 0;
     for (NSInteger i = 0; i < sectionsCount; i ++) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[i];
+        id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[(NSUInteger) i];
         objectsCount += [sectionInfo numberOfObjects];
     }
 

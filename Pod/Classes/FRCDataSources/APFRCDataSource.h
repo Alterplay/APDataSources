@@ -10,7 +10,7 @@
 
 
 
-@interface APFRCDataSource : APBaseDataSource <NSFetchedResultsControllerDelegate, NSFileManagerDelegate>
+@interface APFRCDataSource : APBaseDataSource <NSFetchedResultsControllerDelegate>
 
 
 /**
