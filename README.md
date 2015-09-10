@@ -28,7 +28,7 @@ pod "APDataSources"
 
 Evgeniy Gurtovoy, evgeniy.gurtovoy@alterplay.com<br>
 Nickolay Sheika, nickolai.sheika@alterplay.com<br>
-Sergii Kryvoblotskyi, krivoblotsky@me.com
+Serg Krivoblotsky, krivoblotsky@me.com
 
 ## License
 
