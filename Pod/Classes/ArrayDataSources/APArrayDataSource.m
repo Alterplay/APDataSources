@@ -34,8 +34,8 @@
 - (NSArray *)objectsInSection:(NSUInteger)section
 {
     if (section > 0) {
-        [NSException raise:NSInternalInconsistencyException
-                    format:@"%@ doesn't support more than 1 section!", NSStringFromClass([self class])];
+        [self throwMoreThanOneSectionException];
+        return nil;
     }
     return self.items;
 }
@@ -52,13 +52,25 @@
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section > 0) {
+        [self throwMoreThanOneSectionException];
+        return nil;
+    }
     return self.items[(NSUInteger) indexPath.row];
 }
 
 - (NSIndexPath *)indexPathForObject:(id)object
 {
-    NSUInteger index = [self.items indexOfObject:object];
+    NSUInteger index = [self.items indexOfObjectIdenticalTo:object];
     return index == NSNotFound ? nil : [NSIndexPath indexPathForRow:index inSection:0];
+}
+
+#pragma mark - Private
+
+- (NSArray *)throwMoreThanOneSectionException
+{
+    [NSException raise:NSInternalInconsistencyException
+                format:@"%@ doesn't support more than 1 section!", NSStringFromClass([self class])];
 }
 
 @end

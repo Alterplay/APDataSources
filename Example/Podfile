@@ -9,6 +9,7 @@ end
 
 target 'APDataSources_Tests', :exclusive => true do
   pod "APDataSources", :path => "../"
-
+  pod 'Expecta'
+  pod 'OCMock'
   
 end
