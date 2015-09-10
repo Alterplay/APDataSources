@@ -28,6 +28,7 @@
 		B655361D045118AD4502D1DF /* APArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */; };
 		B65536AEA3088F540C48F15D /* APCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */; };
 		B65539468E31A5B1758F46E8 /* APSimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553AD5401680511B82A217 /* APSimpleCollectionViewCell.m */; };
+		B6553AD87433B7ACD5EE8B90 /* APCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */; };
 		B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553874845F4EC7DA988615 /* APSimpleModel.m */; };
 		B6553B5A0711D8EF88B0317A /* APArrayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */; };
 		B6553CDF84E720DCEA95894A /* APSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */; };
@@ -78,6 +79,7 @@
 		B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayCollectionViewController.m; sourceTree = "<group>"; };
 		B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCoreDataTableViewController.m; sourceTree = "<group>"; };
 		B65533034AED465D28060FA5 /* APArrayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayCollectionViewController.h; sourceTree = "<group>"; };
+		B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		B655343EB3EBA02A745A7D6D /* APCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataTableViewController.h; sourceTree = "<group>"; };
 		B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleTableViewCell.m; sourceTree = "<group>"; };
 		B6553874845F4EC7DA988615 /* APSimpleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleModel.m; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		B6553BE01F859529F0C7097C /* APSimpleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleModel.h; sourceTree = "<group>"; };
 		B6553DBEF4049C736C39254B /* APArrayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayTableViewController.h; sourceTree = "<group>"; };
 		B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewController.m; sourceTree = "<group>"; };
+		B6553F97FB72D52E6C16F0CB /* APCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		C58B4B864D352FDC735C1BEB /* Pods-APDataSources_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F293FA2AF2D6CB320B8FCD3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,8 @@
 				B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */,
 				B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */,
 				B655343EB3EBA02A745A7D6D /* APCoreDataTableViewController.h */,
+				B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */,
+				B6553F97FB72D52E6C16F0CB /* APCoreDataCollectionViewController.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				B655361D045118AD4502D1DF /* APArrayTableViewController.m in Sources */,
 				B65536AEA3088F540C48F15D /* APCoreDataTableViewController.m in Sources */,
 				711C2ECA1BA088B7005BD594 /* APSimpleEntity.m in Sources */,
+				B6553AD87433B7ACD5EE8B90 /* APCoreDataCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
