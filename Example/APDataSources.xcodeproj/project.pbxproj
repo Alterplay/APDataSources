@@ -32,6 +32,7 @@
 		B65539DE6B5D74287964C342 /* APArrayCollectionViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B655321910C6031B984A12FC /* APArrayCollectionViewDataSourceTests.m */; };
 		B6553AD87433B7ACD5EE8B90 /* APCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */; };
 		B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553874845F4EC7DA988615 /* APSimpleModel.m */; };
+		B6553B55CEDBDBF74A7362AD /* APFRCCollectionViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553EC4E5F9948866296811 /* APFRCCollectionViewDataSourceTests.m */; };
 		B6553B5A0711D8EF88B0317A /* APArrayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */; };
 		B6553C1EE4F0026229426C46 /* APArrayTableViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553B719705C83E2A135B1E /* APArrayTableViewDataSourceTests.m */; };
 		B6553CDF84E720DCEA95894A /* APSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */; };
@@ -93,7 +94,7 @@
 		B6553DBEF4049C736C39254B /* APArrayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayTableViewController.h; sourceTree = "<group>"; };
 		B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewController.m; sourceTree = "<group>"; };
 		B6553E5338259FA457A802CC /* APFRCTableViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFRCTableViewDataSourceTests.m; sourceTree = "<group>"; };
-		B6553EC4E5F9948866296811 /* ZMLFRCCollectionViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMLFRCCollectionViewDataSourceTests.m; sourceTree = "<group>"; };
+		B6553EC4E5F9948866296811 /* APFRCCollectionViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFRCCollectionViewDataSourceTests.m; sourceTree = "<group>"; };
 		B6553F97FB72D52E6C16F0CB /* APCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		C58B4B864D352FDC735C1BEB /* Pods-APDataSources_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F293FA2AF2D6CB320B8FCD3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -204,7 +205,7 @@
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				B6553E5338259FA457A802CC /* APFRCTableViewDataSourceTests.m */,
 				B655321910C6031B984A12FC /* APArrayCollectionViewDataSourceTests.m */,
-				B6553EC4E5F9948866296811 /* ZMLFRCCollectionViewDataSourceTests.m */,
+				B6553EC4E5F9948866296811 /* APFRCCollectionViewDataSourceTests.m */,
 				B6553B719705C83E2A135B1E /* APArrayTableViewDataSourceTests.m */,
 				B65532AFE96284F24B3FB26A /* APArrayDataSourceTests.m */,
 			);
@@ -457,6 +458,7 @@
 				B6553C1EE4F0026229426C46 /* APArrayTableViewDataSourceTests.m in Sources */,
 				B65539DE6B5D74287964C342 /* APArrayCollectionViewDataSourceTests.m in Sources */,
 				B6553005C9D8D91664B2BB94 /* APFRCTableViewDataSourceTests.m in Sources */,
+				B6553B55CEDBDBF74A7362AD /* APFRCCollectionViewDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +613,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APDataSources_Example.app/APDataSources_Example";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -630,6 +633,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APDataSources_Example.app/APDataSources_Example";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
