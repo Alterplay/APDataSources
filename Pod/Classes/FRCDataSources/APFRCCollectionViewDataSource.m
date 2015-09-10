@@ -44,6 +44,11 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
     return self;
 }
 
+- (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+{
+    return nil;
+}
+
 #pragma mark - Pausing
 
 - (void)setPaused:(BOOL)paused

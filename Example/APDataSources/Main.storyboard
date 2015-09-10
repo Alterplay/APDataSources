@@ -228,7 +228,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CoreDataCollectionViewDataSource" id="pYm-66-139">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="cZv-gp-G1Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cZv-gp-G1Q">
                             <connections>
                                 <action selector="addButtonTap:" destination="wsN-oy-HcD" id="56d-Iz-1G1"/>
                             </connections>
@@ -284,7 +284,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CoreDataTableViewDataSource" id="tXD-en-auJ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="25N-2Y-HoS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="25N-2Y-HoS">
                             <connections>
                                 <action selector="addButtonTap:" destination="rQe-Bq-EuJ" id="1da-nu-DCw"/>
                             </connections>

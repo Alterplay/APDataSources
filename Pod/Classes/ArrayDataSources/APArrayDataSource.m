@@ -67,7 +67,7 @@
 
 #pragma mark - Private
 
-- (NSArray *)throwMoreThanOneSectionException
+- (void)throwMoreThanOneSectionException
 {
     [NSException raise:NSInternalInconsistencyException
                 format:@"%@ doesn't support more than 1 section!", NSStringFromClass([self class])];

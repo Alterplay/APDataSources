@@ -28,7 +28,7 @@
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView
               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
                    cellReuseIdentifier:(NSString *)reuseIdentifier
-                              delegate:(id <APFRCCollectionViewDataSourceDelegate>)delegate;
+                              delegate:(id <APFRCCollectionViewDataSourceDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Convenience initializer
