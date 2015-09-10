@@ -7,10 +7,11 @@
 
 static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementaryViewIdentifier";
 
+
+
 @interface APArrayCollectionViewDataSource ()
 
 
-@property(weak, nonatomic) id <APArrayCollectionViewDataSourceDelegate> delegate;
 @property(assign, nonatomic) BOOL dummySupplementaryViewRegistered;
 @end
 
@@ -21,15 +22,26 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 
 #pragma mark - Init
 
-- (instancetype)initWithObjects:(NSArray *)objects
-                       delegate:(id <APArrayCollectionViewDataSourceDelegate>)delegate
+- (instancetype)initWithItems:(NSArray *)items
+          cellReuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithItems:objects];
+    return [self initWithItems:items
+           cellReuseIdentifier:reuseIdentifier
+                      delegate:nil];
+}
+
+- (instancetype)initWithItems:(NSArray *)items
+          cellReuseIdentifier:(NSString *)reuseIdentifier
+                     delegate:(id <APArrayCollectionViewDataSourceDelegate>)delegate
+{
+    self = [super initWithItems:items];
     if (self) {
-        _delegate = delegate;
+        self.cellReuseIdentifier = reuseIdentifier;
+        self.delegate = delegate;
     }
     return self;
 }
+
 
 #pragma mark - UICollectionViewDataSource
 
@@ -65,7 +77,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 
     /* Dequeue cell */
     UICollectionViewCell <APCellProtocol> *collectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
-                                                                                                           forIndexPath:indexPath];
+                                                                                                          forIndexPath:indexPath];
 
     /* Fetch object */
     id model = [self objectAtIndexPath:indexPath];

@@ -12,7 +12,9 @@
 
 @interface APArrayTableViewDataSource : APArrayDataSource <UITableViewDataSource>
 
-
+/**
+ *  Convenience initializers
+ */
 - (instancetype)initWithItems:(NSArray *)items
           cellReuseIdentifier:(NSString *)reuseIdentifier;
 - (instancetype)initWithItems:(NSArray *)items

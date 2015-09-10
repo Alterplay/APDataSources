@@ -12,9 +12,7 @@
 
 - (NSArray *)objectsInSection:(NSInteger)section
 {
-    NSArray *sections = self.sections;
-    id <NSFetchedResultsSectionInfo> firstSection = sections[(NSUInteger) section];
-    return firstSection.objects;
+
 }
 
 @end

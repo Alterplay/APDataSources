@@ -10,14 +10,6 @@
 
 
 
-@interface APArrayTableViewDataSource ()
-
-
-@property(nonatomic, copy, readwrite) NSArray *items;
-@end
-
-
-
 @implementation APArrayTableViewDataSource
 
 

@@ -4,10 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class APBaseDataSource;
-@protocol APCellProtocol;
-
+#import "APDataSource.h"
+#import "APCellProtocol.h"
 
 
 @protocol APBaseDataSourceDelegate <NSObject>
@@ -26,7 +24,7 @@
  *  @return NSString reuseIdentifier
  */
 - (NSString *)cellReuseIdentifierForIndexPath:(NSIndexPath *)indexPath
-                                 inDataSource:(id <APDataSource> *)dataSource;
+                                 inDataSource:(id <APDataSource>)dataSource;
 
 /**
  *  If method implemented, delegate can configurate cell at its discretion

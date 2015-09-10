@@ -4,7 +4,7 @@
 //
 
 #import "APArrayDataSource.h"
-
+#import "APBaseDataSourceDelegate.h"
 
 
 @protocol APArrayCollectionViewDataSourceDelegate;
@@ -13,9 +13,28 @@
 
 @interface APArrayCollectionViewDataSource : APArrayDataSource <UICollectionViewDataSource>
 
+/**
+ *  Convenience initializers
+ */
+- (instancetype)initWithItems:(NSArray *)items
+          cellReuseIdentifier:(NSString *)reuseIdentifier;
+- (instancetype)initWithItems:(NSArray *)items
+          cellReuseIdentifier:(NSString *)reuseIdentifier
+                     delegate:(id <APArrayCollectionViewDataSourceDelegate>)delegate;
 
-- (instancetype)initWithObjects:(NSArray *)objects
-                       delegate:(id <APArrayCollectionViewDataSourceDelegate>)delegate;
+/**
+ *  Reuse identifier
+ *
+ *  Should be set before
+ */
+@property(nonatomic, copy) NSString *cellReuseIdentifier;
+
+/**
+ *  Delegate
+ *
+ *  Can be used to make custom cell configurations. Delegate methods always have more priority.
+ */
+@property(nonatomic, weak) id <APArrayCollectionViewDataSourceDelegate> delegate;
 
 @end
 

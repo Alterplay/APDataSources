@@ -9,24 +9,23 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 
 
 
-@interface APFRCCollectionViewDataSource ()
-
-
-@property(weak, nonatomic) id <APFRCCollectionViewDataSourceDelegate> delegate;
-@property(weak, nonatomic) UICollectionView *collectionView;
-@end
-
-
-
 @implementation APFRCCollectionViewDataSource
-
-
-@synthesize paused = _paused;
 
 #pragma mark - Init
 
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView
               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+                   cellReuseIdentifier:(NSString *)reuseIdentifier
+{
+    return [self initWithCollectionView:collectionView
+               fetchedResultsController:fetchedResultsController
+                    cellReuseIdentifier:reuseIdentifier
+                               delegate:nil];
+}
+
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView
+              fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+                   cellReuseIdentifier:(NSString *)reuseIdentifier
                               delegate:(id <APFRCCollectionViewDataSourceDelegate>)delegate
 {
     self = [super initWithFetchedResultsController:fetchedResultsController];
@@ -48,7 +47,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 
 - (void)setPaused:(BOOL)paused
 {
-    _paused = paused;
+    [super setPaused:paused];
     if (paused) {
         self.fetchedResultsController.delegate = nil;
     }

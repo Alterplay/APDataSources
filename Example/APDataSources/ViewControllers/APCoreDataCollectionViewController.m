@@ -56,6 +56,7 @@
 
     self.dataSource = [[APFRCCollectionViewDataSource alloc] initWithCollectionView:self.collectionView
                                                            fetchedResultsController:fetchedResultsController
+                                                                cellReuseIdentifier:nil
                                                                            delegate:nil];
     self.dataSource.cellReuseIdentifier = [APSimpleCollectionViewCell reuseIdentifier];
 }

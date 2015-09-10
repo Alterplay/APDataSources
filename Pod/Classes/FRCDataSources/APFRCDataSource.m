@@ -6,7 +6,6 @@
 #import "APFRCDataSource.h"
 
 
-
 @implementation APFRCDataSource
 
 
@@ -33,7 +32,8 @@
 
 - (NSArray *)objectsInSection:(NSUInteger)section
 {
-    return [self.fetchedResultsController objectsInSection:section];
+    id <NSFetchedResultsSectionInfo> theSection = self.fetchedResultsController.sections[(NSUInteger) section];
+    return theSection.objects;
 }
 
 - (NSUInteger)sectionsCount

@@ -27,7 +27,26 @@
  */
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView
               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+                   cellReuseIdentifier:(NSString *)reuseIdentifier
                               delegate:(id <APFRCCollectionViewDataSourceDelegate>)delegate;
+
+/**
+ *  Reuse identifier
+ *
+ *  Should be set before
+ */
+@property(nonatomic, copy) NSString *cellReuseIdentifier;
+
+/**
+ *  Delegate
+ */
+@property(weak, nonatomic) id <APFRCCollectionViewDataSourceDelegate> delegate;
+
+/**
+ *  Managed collection view
+ */
+@property(weak, nonatomic) UICollectionView *collectionView;
+
 
 @end
 
