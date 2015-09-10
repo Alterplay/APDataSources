@@ -10,8 +10,7 @@
 
 
 
-@interface APArrayCollectionViewController () <UICollectionViewDelegateFlowLayout>
-
+@interface APArrayCollectionViewController () 
 
 @property(weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

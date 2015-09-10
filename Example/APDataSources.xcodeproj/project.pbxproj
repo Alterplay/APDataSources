@@ -235,13 +235,13 @@
 			isa = PBXGroup;
 			children = (
 				B6553DBEF4049C736C39254B /* APArrayTableViewController.h */,
+				B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */,
 				B65533034AED465D28060FA5 /* APArrayCollectionViewController.h */,
 				B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */,
-				B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */,
-				B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */,
 				B655343EB3EBA02A745A7D6D /* APCoreDataTableViewController.h */,
-				B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */,
+				B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */,
 				B6553F97FB72D52E6C16F0CB /* APCoreDataCollectionViewController.h */,
+				B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
