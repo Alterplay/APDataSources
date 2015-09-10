@@ -1,15 +1,19 @@
 # APDataSources
 
-[![CI Status](http://img.shields.io/travis/Nickolay Sheika/APDataSources.svg?style=flat)](https://travis-ci.org/Nickolay Sheika/APDataSources)
+[![CI Status](https://travis-ci.org/Alterplay/APDataSources.svg?style=flat)](https://travis-ci.org/Alterplay/APDataSources)
 [![Version](https://img.shields.io/cocoapods/v/APDataSources.svg?style=flat)](http://cocoapods.org/pods/APDataSources)
 [![License](https://img.shields.io/cocoapods/l/APDataSources.svg?style=flat)](http://cocoapods.org/pods/APDataSources)
 [![Platform](https://img.shields.io/cocoapods/p/APDataSources.svg?style=flat)](http://cocoapods.org/pods/APDataSources)
+
+Nothing special. Just our implementation of UITableView and UICollectionView data sources.
 
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 7.0
 
 ## Installation
 
@@ -22,7 +26,9 @@ pod "APDataSources"
 
 ## Author
 
-Nickolay Sheika, nickolai.sheika@alterplay.com
+Evgeniy Gurtovoy, evgeniy.gurtovoy@alterplay.com<br>
+Nickolay Sheika, nickolai.sheika@alterplay.com<br>
+Sergii Kryvoblotskyi, krivoblotsky@me.com
 
 ## License
 
