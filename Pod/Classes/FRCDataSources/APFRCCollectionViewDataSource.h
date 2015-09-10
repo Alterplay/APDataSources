@@ -60,3 +60,11 @@
 - (UICollectionReusableView *)sectionFooterReusableAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
+
+@interface APFRCCollectionViewDataSource (Unavailable)
+
+- (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end

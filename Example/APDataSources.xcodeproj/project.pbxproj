@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0598B52E8848A9A750E886 /* Pods_APDataSources_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82515B6D729B5AF11ED86760 /* Pods_APDataSources_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3C000FAA8852E730246811A1 /* libPods-APDataSources_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A021327CC638094953EE8B05 /* libPods-APDataSources_Example.a */; };
+		48020BAE482BA17C73CBB842 /* libPods-APDataSources_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE4D6BE8076C1169622B319 /* libPods-APDataSources_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* APAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* APArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* APArrayTableViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		711C2EC71BA08293005BD594 /* APDataSources_Example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 711C2EC51BA08293005BD594 /* APDataSources_Example.xcdatamodeld */; };
+		711C2ECA1BA088B7005BD594 /* APSimpleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 711C2EC91BA088B7005BD594 /* APSimpleEntity.m */; };
+		71DD124A1BA099280053DAEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD12491BA099280053DAEA /* LaunchScreen.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B655361D045118AD4502D1DF /* APArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */; };
+		B65536AEA3088F540C48F15D /* APCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */; };
 		B65539468E31A5B1758F46E8 /* APSimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553AD5401680511B82A217 /* APSimpleCollectionViewCell.m */; };
 		B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553874845F4EC7DA988615 /* APSimpleModel.m */; };
+		B6553B5A0711D8EF88B0317A /* APArrayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */; };
 		B6553CDF84E720DCEA95894A /* APSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */; };
-		B6553D168647ED0F6DF60C0B /* APArrayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655300DF2A69375DAC2527E /* APArrayCollectionViewController.m */; };
-		E133EC579954ED5477B1B8AA /* Pods_APDataSources_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92A3AA0A5A8D7D114700011 /* Pods_APDataSources_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0BA8DC7A1A843FCB6D467A72 /* Pods-APDataSources_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		24D69166E63A44F070F5D07A /* Pods-APDataSources_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Tests/Pods-APDataSources_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3FE4D6BE8076C1169622B319 /* libPods-APDataSources_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APDataSources_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F36788682153030DC763600 /* APDataSources.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APDataSources.podspec; path = ../APDataSources.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* APDataSources_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APDataSources_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,8 +58,6 @@
 		6003F59B195388D20070C39A /* APDataSources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APDataSources-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* APAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* APAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* APArrayTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APArrayTableViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* APArrayTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* APDataSources_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APDataSources_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,19 +65,26 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		82515B6D729B5AF11ED86760 /* Pods_APDataSources_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APDataSources_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		711C2EC61BA08293005BD594 /* APDataSources_Example.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APDataSources_Example.xcdatamodel; sourceTree = "<group>"; };
+		711C2EC81BA088AF005BD594 /* APSimpleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleEntity.h; sourceTree = "<group>"; };
+		711C2EC91BA088B7005BD594 /* APSimpleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleEntity.m; sourceTree = "<group>"; };
+		71DD12491BA099280053DAEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8D7AA13C66C4B091770BD832 /* Pods-APDataSources_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Tests/Pods-APDataSources_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A92A3AA0A5A8D7D114700011 /* Pods_APDataSources_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APDataSources_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A021327CC638094953EE8B05 /* libPods-APDataSources_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APDataSources_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F79A8735A27AFCC3298C42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B655300DF2A69375DAC2527E /* APArrayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayCollectionViewController.m; sourceTree = "<group>"; };
 		B655308A20894D8A7A01E43C /* APSimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		B65530E386A8645119819688 /* APSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleTableViewCell.h; sourceTree = "<group>"; };
+		B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayCollectionViewController.m; sourceTree = "<group>"; };
+		B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCoreDataTableViewController.m; sourceTree = "<group>"; };
+		B65533034AED465D28060FA5 /* APArrayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayCollectionViewController.h; sourceTree = "<group>"; };
+		B655343EB3EBA02A745A7D6D /* APCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataTableViewController.h; sourceTree = "<group>"; };
 		B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleTableViewCell.m; sourceTree = "<group>"; };
 		B6553874845F4EC7DA988615 /* APSimpleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleModel.m; sourceTree = "<group>"; };
 		B6553AD5401680511B82A217 /* APSimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		B6553BE01F859529F0C7097C /* APSimpleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleModel.h; sourceTree = "<group>"; };
-		B6553FAAD4DE0FA56D243652 /* APArrayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayCollectionViewController.h; sourceTree = "<group>"; };
+		B6553DBEF4049C736C39254B /* APArrayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayTableViewController.h; sourceTree = "<group>"; };
+		B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewController.m; sourceTree = "<group>"; };
 		C58B4B864D352FDC735C1BEB /* Pods-APDataSources_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APDataSources_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F293FA2AF2D6CB320B8FCD3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +97,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				0A0598B52E8848A9A750E886 /* Pods_APDataSources_Example.framework in Frameworks */,
+				3C000FAA8852E730246811A1 /* libPods-APDataSources_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +108,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				E133EC579954ED5477B1B8AA /* Pods_APDataSources_Tests.framework in Frameworks */,
+				48020BAE482BA17C73CBB842 /* libPods-APDataSources_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +154,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				82515B6D729B5AF11ED86760 /* Pods_APDataSources_Example.framework */,
-				A92A3AA0A5A8D7D114700011 /* Pods_APDataSources_Tests.framework */,
+				A021327CC638094953EE8B05 /* libPods-APDataSources_Example.a */,
+				3FE4D6BE8076C1169622B319 /* libPods-APDataSources_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,14 +166,12 @@
 				6003F59C195388D20070C39A /* APAppDelegate.h */,
 				6003F59D195388D20070C39A /* APAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* APArrayTableViewController.h */,
-				6003F5A6195388D20070C39A /* APArrayTableViewController.m */,
+				71DD12491BA099280053DAEA /* LaunchScreen.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 				B6553EC0E0BD3BB41086817C /* Model */,
 				B655362AAA2DBE8962ACD837 /* View */,
-				B655300DF2A69375DAC2527E /* APArrayCollectionViewController.m */,
-				B6553FAAD4DE0FA56D243652 /* APArrayCollectionViewController.h */,
+				B6553C8A8080749E27F5CF41 /* ViewControllers */,
 			);
 			name = "Example for APDataSources";
 			path = APDataSources;
@@ -220,11 +228,27 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B6553C8A8080749E27F5CF41 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6553DBEF4049C736C39254B /* APArrayTableViewController.h */,
+				B65533034AED465D28060FA5 /* APArrayCollectionViewController.h */,
+				B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */,
+				B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */,
+				B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */,
+				B655343EB3EBA02A745A7D6D /* APCoreDataTableViewController.h */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B6553EC0E0BD3BB41086817C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				711C2EC81BA088AF005BD594 /* APSimpleEntity.h */,
+				711C2EC91BA088B7005BD594 /* APSimpleEntity.m */,
 				B6553874845F4EC7DA988615 /* APSimpleModel.m */,
 				B6553BE01F859529F0C7097C /* APSimpleModel.h */,
+				711C2EC51BA08293005BD594 /* APDataSources_Example.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,7 +264,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				104C9FABFBB9F09BC28F6C75 /* Embed Pods Frameworks */,
 				0BB666682677CC55140C6F05 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -260,7 +283,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				A031708D04897764385320D5 /* Embed Pods Frameworks */,
 				D5C1B8ABBDFE42247BEC9FA0 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -312,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DD124A1BA099280053DAEA /* LaunchScreen.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -344,21 +367,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		104C9FABFBB9F09BC28F6C75 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APDataSources_Example/Pods-APDataSources_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2CE944897F465A6E01186FE2 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,21 +380,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A031708D04897764385320D5 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APDataSources_Tests/Pods-APDataSources_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5C1B8ABBDFE42247BEC9FA0 /* Copy Pods Resources */ = {
@@ -427,12 +420,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* APAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* APArrayTableViewController.m in Sources */,
+				711C2EC71BA08293005BD594 /* APDataSources_Example.xcdatamodeld in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */,
 				B6553CDF84E720DCEA95894A /* APSimpleTableViewCell.m in Sources */,
 				B65539468E31A5B1758F46E8 /* APSimpleCollectionViewCell.m in Sources */,
-				B6553D168647ED0F6DF60C0B /* APArrayCollectionViewController.m in Sources */,
+				B6553B5A0711D8EF88B0317A /* APArrayCollectionViewController.m in Sources */,
+				B655361D045118AD4502D1DF /* APArrayTableViewController.m in Sources */,
+				B65536AEA3088F540C48F15D /* APCoreDataTableViewController.m in Sources */,
+				711C2ECA1BA088B7005BD594 /* APSimpleEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +645,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		711C2EC51BA08293005BD594 /* APDataSources_Example.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				711C2EC61BA08293005BD594 /* APDataSources_Example.xcdatamodel */,
+			);
+			currentVersion = 711C2EC61BA08293005BD594 /* APDataSources_Example.xcdatamodel */;
+			path = APDataSources_Example.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6003F582195388D10070C39A /* Project object */;
 }

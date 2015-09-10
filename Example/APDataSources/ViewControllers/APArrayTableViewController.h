@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Nickolay Sheika. All rights reserved.
 //
 
-@import UIKit;
 
 @interface APArrayTableViewController : UIViewController
 
