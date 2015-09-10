@@ -31,6 +31,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
     self = [super initWithFetchedResultsController:fetchedResultsController];
     if (self) {
         _delegate = delegate;
+        _cellReuseIdentifier = reuseIdentifier;
 
         _collectionView = collectionView;
         _collectionView.dataSource = self;
@@ -63,7 +64,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return [[self.fetchedResultsController objectsInSection:section] count];
+    return [[self objectsInSection:(NSUInteger) section] count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

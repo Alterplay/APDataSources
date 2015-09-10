@@ -43,7 +43,7 @@
 
 - (NSUInteger)allObjectsCount
 {
-    return [self.fetchedResultsController.sections.valueForKeyPath:@"@sum.numberOfObjects"];
+    return [[self.fetchedResultsController.sections valueForKeyPath:@"@sum.numberOfObjects"] unsignedIntegerValue];
 }
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath

@@ -24,8 +24,6 @@
 
 /**
  *  Reuse identifier
- *
- *  Should be set before
  */
 @property(nonatomic, copy) NSString *cellReuseIdentifier;
 

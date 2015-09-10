@@ -15,6 +15,11 @@
 
 
 /**
+ *  Reuse identifier
+ */
+@property(nonatomic, copy) NSString *cellReuseIdentifier;
+
+/**
 *  Delegate
 */
 @property(weak, nonatomic) id <APFRCTableViewDataSourceDelegate> delegate;
@@ -40,13 +45,11 @@
 */
 - (instancetype)initWithTableView:(UITableView *)tableView
          fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+              cellReuseIdentifier:(NSString *)reuseIdentifier
                          delegate:(id <APFRCTableViewDataSourceDelegate>)delegate NS_DESIGNATED_INITIALIZER;
-+ (instancetype)dataSourceWithTableView:(UITableView *)tableView
-               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
-                               delegate:(id <APFRCTableViewDataSourceDelegate>)delegate;
 
 /**
-*  Convenience initializer. Delegate should be setted manually
+*  Convenience initializer. Delegate should be set manually
 *
 *  @param tableView                UITableView
 *  @param fetchedResultsController NSFetchedResultsController
@@ -54,9 +57,8 @@
 *  @return instance
 */
 - (instancetype)initWithTableView:(UITableView *)tableView
-         fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
-+ (instancetype)dataSourceWithTableView:(UITableView *)tableView
-               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
+         fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+              cellReuseIdentifier:(NSString *)reuseIdentifier;
 
 @end
 

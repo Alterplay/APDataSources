@@ -10,18 +10,19 @@
 @implementation APFRCTableViewDataSource
 
 
-@synthesize paused = _paused;
-
 #pragma mark - Init
 
 - (instancetype)initWithTableView:(UITableView *)tableView
          fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+              cellReuseIdentifier:(NSString *)reuseIdentifier
                          delegate:(id <APFRCTableViewDataSourceDelegate>)delegate
 {
     self = [super initWithFetchedResultsController:fetchedResultsController];
     if (self) {
         _delegate = delegate;
         _allowAnimatedUpdate = YES;
+
+        _cellReuseIdentifier = reuseIdentifier;
 
         _tableView = tableView;
         _tableView.dataSource = self;
@@ -31,38 +32,22 @@
     return self;
 }
 
-+ (instancetype)dataSourceWithTableView:(UITableView *)tableView
-               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
-                               delegate:(id <APFRCTableViewDataSourceDelegate>)delegate
-{
-    return [[self alloc] initWithTableView:tableView
-                  fetchedResultsController:fetchedResultsController
-                                  delegate:delegate];
-}
-
 - (instancetype)initWithTableView:(UITableView *)tableView
          fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+              cellReuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [self initWithTableView:tableView
           fetchedResultsController:fetchedResultsController
+               cellReuseIdentifier:reuseIdentifier
                           delegate:nil];
     return self;
-}
-
-
-+ (instancetype)dataSourceWithTableView:(UITableView *)tableView
-               fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
-{
-    return [[self alloc] initWithTableView:tableView
-                  fetchedResultsController:fetchedResultsController
-                                  delegate:nil];
 }
 
 #pragma mark - Pausing
 
 - (void)setPaused:(BOOL)paused
 {
-    _paused = paused;
+    [super setPaused:paused];
     if (paused) {
         self.fetchedResultsController.delegate = nil;
     }

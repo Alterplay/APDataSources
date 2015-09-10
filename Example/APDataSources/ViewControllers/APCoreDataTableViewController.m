@@ -59,6 +59,7 @@
 
     self.dataSource = [[APFRCTableViewDataSource alloc] initWithTableView:self.tableView
                                                  fetchedResultsController:fetchedResultsController
+                                                      cellReuseIdentifier:nil
                                                                  delegate:nil];
     self.dataSource.cellReuseIdentifier = [APSimpleTableViewCell reuseIdentifier];
 }

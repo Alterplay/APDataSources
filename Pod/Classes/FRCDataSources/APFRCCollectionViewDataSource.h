@@ -31,9 +31,14 @@
                               delegate:(id <APFRCCollectionViewDataSourceDelegate>)delegate;
 
 /**
+ *  Convenience initializer
+ */
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView
+              fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
+                   cellReuseIdentifier:(NSString *)reuseIdentifier;
+
+/**
  *  Reuse identifier
- *
- *  Should be set before
  */
 @property(nonatomic, copy) NSString *cellReuseIdentifier;
 
@@ -45,7 +50,7 @@
 /**
  *  Managed collection view
  */
-@property(weak, nonatomic) UICollectionView *collectionView;
+@property(weak, nonatomic, readonly) UICollectionView *collectionView;
 
 
 @end
