@@ -28,9 +28,11 @@
 		B655361D045118AD4502D1DF /* APArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */; };
 		B65536AEA3088F540C48F15D /* APCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */; };
 		B65539468E31A5B1758F46E8 /* APSimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553AD5401680511B82A217 /* APSimpleCollectionViewCell.m */; };
+		B65539DE6B5D74287964C342 /* APArrayCollectionViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B655321910C6031B984A12FC /* APArrayCollectionViewDataSourceTests.m */; };
 		B6553AD87433B7ACD5EE8B90 /* APCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B655342F707EA72A59895477 /* APCoreDataCollectionViewController.m */; };
 		B6553B32C6F420A6CCEE2044 /* APSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553874845F4EC7DA988615 /* APSimpleModel.m */; };
 		B6553B5A0711D8EF88B0317A /* APArrayCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */; };
+		B6553C1EE4F0026229426C46 /* APArrayTableViewDataSourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6553B719705C83E2A135B1E /* APArrayTableViewDataSourceTests.m */; };
 		B6553CDF84E720DCEA95894A /* APSimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +78,7 @@
 		B655308A20894D8A7A01E43C /* APSimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		B65530E386A8645119819688 /* APSimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleTableViewCell.h; sourceTree = "<group>"; };
 		B65531CCE39CED0C8CE10FCF /* APArrayCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayCollectionViewController.m; sourceTree = "<group>"; };
-		B655321910C6031B984A12FC /* ZMLArrayCollectionViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMLArrayCollectionViewDataSourceTests.m; sourceTree = "<group>"; };
+		B655321910C6031B984A12FC /* APArrayCollectionViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayCollectionViewDataSourceTests.m; sourceTree = "<group>"; };
 		B65532AFE96284F24B3FB26A /* APArrayDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayDataSourceTests.m; sourceTree = "<group>"; };
 		B65532B126C29739DBBCB0DC /* APCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCoreDataTableViewController.m; sourceTree = "<group>"; };
 		B65533034AED465D28060FA5 /* APArrayCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayCollectionViewController.h; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 		B65534578C6AAA2B6077B983 /* APSimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleTableViewCell.m; sourceTree = "<group>"; };
 		B6553874845F4EC7DA988615 /* APSimpleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleModel.m; sourceTree = "<group>"; };
 		B6553AD5401680511B82A217 /* APSimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimpleCollectionViewCell.m; sourceTree = "<group>"; };
-		B6553B719705C83E2A135B1E /* ZMLArrayTableViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMLArrayTableViewDataSourceTests.m; sourceTree = "<group>"; };
+		B6553B719705C83E2A135B1E /* APArrayTableViewDataSourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewDataSourceTests.m; sourceTree = "<group>"; };
 		B6553BE01F859529F0C7097C /* APSimpleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimpleModel.h; sourceTree = "<group>"; };
 		B6553DBEF4049C736C39254B /* APArrayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APArrayTableViewController.h; sourceTree = "<group>"; };
 		B6553DEF9DADB9D324797F5A /* APArrayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APArrayTableViewController.m; sourceTree = "<group>"; };
@@ -200,9 +202,9 @@
 			children = (
 				6003F5B6195388D20070C39A /* Supporting Files */,
 				B6553E5338259FA457A802CC /* ZMLFRCTableViewDataSourceTests.m */,
-				B655321910C6031B984A12FC /* ZMLArrayCollectionViewDataSourceTests.m */,
+				B655321910C6031B984A12FC /* APArrayCollectionViewDataSourceTests.m */,
 				B6553EC4E5F9948866296811 /* ZMLFRCCollectionViewDataSourceTests.m */,
-				B6553B719705C83E2A135B1E /* ZMLArrayTableViewDataSourceTests.m */,
+				B6553B719705C83E2A135B1E /* APArrayTableViewDataSourceTests.m */,
 				B65532AFE96284F24B3FB26A /* APArrayDataSourceTests.m */,
 			);
 			path = Tests;
@@ -451,6 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B655360902DF4921571455B3 /* APArrayDataSourceTests.m in Sources */,
+				B6553C1EE4F0026229426C46 /* APArrayTableViewDataSourceTests.m in Sources */,
+				B65539DE6B5D74287964C342 /* APArrayCollectionViewDataSourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

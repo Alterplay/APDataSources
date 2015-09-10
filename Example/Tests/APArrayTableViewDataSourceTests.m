@@ -1,23 +1,22 @@
 //
-//  ZMLArrayTableViewDataSourceTests.m
-//  Zoomlee
-//
 //  Created by Nickolay Sheika on 18.03.15.
 //  Copyright (c) 2015 Alterplay. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
-#import "ZMLArrayTableViewDataSource.h"
+#import <APDataSources/APCellProtocol.h>
+#import <APDataSources/APBaseDataSourceDelegate.h>
+#import "APArrayTableViewDataSource.h"
+#import "OCMStubRecorder.h"
+#import "OCMockObject.h"
 
 
 
-@interface ZMLArrayTableViewDataSourceTests : XCTestCase
+@interface APArrayTableViewDataSourceTests : XCTestCase
 
 
 #pragma mark - SUT
-@property(nonatomic, strong) ZMLArrayTableViewDataSource *dataSource;
-@property(nonatomic, strong) ZMLArrayTableViewDataSource *dataSourceEmpty;
+@property(nonatomic, strong) APArrayTableViewDataSource *dataSource;
+@property(nonatomic, strong) APArrayTableViewDataSource *dataSourceEmpty;
 
 #pragma mark - Mocks
 @property(nonatomic, strong) id mockCellConfiguration;
@@ -32,7 +31,7 @@
 
 
 
-@implementation ZMLArrayTableViewDataSourceTests
+@implementation APArrayTableViewDataSourceTests
 
 
 - (void)setUp
@@ -43,36 +42,18 @@
     self.fakeCellIdentifier1 = @"FakeCellIdentifier1";
     self.fakeCellIdentifier2 = @"FakeCellIdentifier2";
 
-    self.dataSource = [[ZMLArrayTableViewDataSource alloc] initWithItems:self.fakeItems];
+    self.dataSource = [[APArrayTableViewDataSource alloc] initWithItems:self.fakeItems];
     self.dataSource.cellReuseIdentifier = self.fakeCellIdentifier1;
 
-    self.dataSourceEmpty = [[ZMLArrayTableViewDataSource alloc] initWithItems:@[ ]];
+    self.dataSourceEmpty = [[APArrayTableViewDataSource alloc] initWithItems:@[ ]];
     self.dataSourceEmpty.cellReuseIdentifier = self.fakeCellIdentifier1;
 
-    self.mockCellConfiguration = [OCMockObject mockForProtocol:@protocol(ZMLCellProtocol)];
-    self.mockDelegate = [OCMockObject niceMockForProtocol:@protocol(ZMLBaseDataSourceDelegate)];
+    self.mockCellConfiguration = [OCMockObject mockForProtocol:@protocol(APCellProtocol)];
+    self.mockDelegate = [OCMockObject niceMockForProtocol:@protocol(APBaseDataSourceDelegate)];
     self.mockTableView = [OCMockObject mockForClass:[UITableView class]];
 }
 
-
-- (void)tearDown
-{
-    self.dataSource = nil;
-    self.dataSourceEmpty = nil;
-
-    self.mockCellConfiguration = nil;
-    self.mockDelegate = nil;
-    self.mockTableView = nil;
-
-    self.fakeItems = nil;
-    self.fakeCellIdentifier1 = nil;
-    self.fakeCellIdentifier2 = nil;
-
-    [super tearDown];
-}
-
-
-#pragma mark - init
+#pragma mark - Init
 
 - (void)testInit
 {
@@ -84,24 +65,24 @@
 
 - (void)testNumberOfSections_ShouldReturnOneIfItemsIsNotEmpty
 {
-    expect([self.dataSource numberOfSectionsInTableView:nil]).to.equal(1);
+    expect([self.dataSource numberOfSectionsInTableView:self.mockTableView]).to.equal(1);
 }
 
 - (void)testNumberOfSections_ShouldReturnNullIfItemsIsEmpty
 {
-    expect([self.dataSourceEmpty numberOfSectionsInTableView:nil]).to.equal(0);
+    expect([self.dataSourceEmpty numberOfSectionsInTableView:self.mockTableView]).to.equal(0);
 }
 
 - (void)testNumberOfRowsInSection_ShouldReturnItemsCount
 {
-    expect([self.dataSource tableView:nil numberOfRowsInSection:0]).to.equal(4);
-    expect([self.dataSourceEmpty tableView:nil numberOfRowsInSection:0]).to.equal(0);
+    expect([self.dataSource tableView:self.mockTableView numberOfRowsInSection:0]).to.equal(4);
+    expect([self.dataSourceEmpty tableView:self.mockTableView numberOfRowsInSection:0]).to.equal(0);
 }
 
 - (void)testNumberOfRowsInSection_ShouldThrowExceptionIfAskedForSecondSection
 {
     expect(^{
-        [self.dataSource tableView:nil numberOfRowsInSection:1];
+        [self.dataSource tableView:self.mockTableView numberOfRowsInSection:1];
     }).to.raiseAny();
 }
 
@@ -127,7 +108,8 @@
 {
     // given
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
-    [[[self.mockDelegate stub] andReturn:self.fakeCellIdentifier2] cellReuseIdentifierForIndexPath:indexPath inDataSource:self.dataSource];
+    [[[self.mockDelegate stub] andReturn:self.fakeCellIdentifier2] cellReuseIdentifierForIndexPath:indexPath
+                                                                                      inDataSource:self.dataSource];
     self.dataSource.delegate = self.mockDelegate;
 
     // expectations
@@ -135,7 +117,7 @@
                                                                                              forIndexPath:indexPath];
     [[self.mockDelegate expect] configureCell:[OCMArg any]
                                   atIndexPath:indexPath
-                                   withObject:self.fakeItems[2]];
+                                    withModel:self.fakeItems[2]];
 
     // call
     [self.dataSource tableView:self.mockTableView cellForRowAtIndexPath:indexPath];

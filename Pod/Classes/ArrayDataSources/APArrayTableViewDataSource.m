@@ -45,7 +45,6 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    NSParameterAssert(section == 0);
     return [[self objectsInSection:(NSUInteger) section] count];
 }
 

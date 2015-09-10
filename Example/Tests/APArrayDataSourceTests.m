@@ -31,6 +31,8 @@
     self.dataSource = [[APArrayDataSource alloc] initWithItems:self.items];
 }
 
+#pragma mark - Tests
+
 - (void)testInit
 {
     APArrayDataSource *dataSource = [[APArrayDataSource alloc] initWithItems:self.items];
