@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Alterplay. All rights reserved.
 //
 
-#import "APDataSource.h"
+#import "APDataProvider.h"
 #import "APArrayTableViewDataSource.h"
 
 
@@ -13,11 +13,15 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithItems:(NSArray *)items
-                  cellFactory:(id <APTableViewCellFactory>)cellFactory
+- (instancetype)initWithDataProvider:(id <APDataProvider>)dataProvider
+                         cellFactory:(id <APTableViewCellFactory>)cellFactory
 {
-    self = [super initWithItems:items];
+    NSParameterAssert(dataProvider);
+    NSParameterAssert(cellFactory);
+
+    self = [super init];
     if (self) {
+        _dataProvider = dataProvider;
         _cellFactory = cellFactory;
     }
     return self;
@@ -27,13 +31,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self sectionsCount];
+    return [self.dataProvider sectionsCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    return [[self objectsInSection:(NSUInteger) section] count];
+    return [[self.dataProvider objectsInSection:(NSUInteger) section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -70,7 +74,7 @@
 //        }
 //    }
 //    return tableViewCell;
-    id model = [self objectAtIndexPath:indexPath];
+    id model = [self.dataProvider objectAtIndexPath:indexPath];
     return [self.cellFactory cellForItem:model
                              inTableView:tableView
                              atIndexPath:indexPath];

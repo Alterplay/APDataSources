@@ -5,11 +5,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "APDataSource.h"
+#import "APDataProvider.h"
 
 
 
-@interface APFRCDataSource : NSObject <APDataSource, NSFetchedResultsControllerDelegate>
+@interface APFRCDataSource : NSObject <APDataProvider, NSFetchedResultsControllerDelegate>
 
 
 /**

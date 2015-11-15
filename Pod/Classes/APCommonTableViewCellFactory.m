@@ -46,18 +46,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier
                                                             forIndexPath:indexPath];
     if (self.cellConfiguratorBlock) {
-        self.cellConfiguratorBlock(cell, item);
+        self.cellConfiguratorBlock(tableView, cell, item);
     }
 
     // for subclasses only
-    [self configureCell:cell withModel:item];
+    [self configureCell:cell inTableView:tableView withModel:item];
 
     return cell;
 }
 
 #pragma mark - Subclasses
 
-- (void)configureCell:(UITableViewCell *)cell withModel:(id)model
+- (void)configureCell:(UITableViewCell *)cell
+          inTableView:(UITableView *)tableView
+            withModel:(id)model
 {
     // abstract, for subclasses only
 }

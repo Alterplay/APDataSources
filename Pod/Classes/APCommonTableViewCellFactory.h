@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import "APTableViewCellFactory.h"
 
-typedef void (^CellConfigurator)(UITableViewCell *cell, id model);
+typedef void (^CellConfigurator)(UITableView *tableView, UITableViewCell *cell, id model);
 
 
 
@@ -22,12 +22,20 @@ typedef void (^CellConfigurator)(UITableViewCell *cell, id model);
 @end
 
 
+@interface APCommonTableViewCellFactory (Unavailable)
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end
+
 
 // for subclasses only
 @interface APCommonTableViewCellFactory (Subclasses)
 
 
 - (void)configureCell:(UITableViewCell *)cell
+          inTableView:(UITableView *)tableView
             withModel:(id)model;
 
 @end

@@ -9,29 +9,24 @@
 
 
 
-@interface APArrayTableViewDataSource : APArrayDataSource <UITableViewDataSource>
+@interface APArrayTableViewDataSource : NSObject <UITableViewDataSource>
 
 
-/**
- *  Convenience initializers
- */
-- (instancetype)initWithItems:(NSArray *)items
-                  cellFactory:(id <APTableViewCellFactory>)cellFactory NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDataProvider:(id <APDataProvider>)dataProvider
+                         cellFactory:(id <APTableViewCellFactory>)cellFactory NS_DESIGNATED_INITIALIZER;
 
-
+@property(nonatomic, strong, readonly) id <APDataProvider> dataProvider;
 @property(nonatomic, strong, readonly) id <APTableViewCellFactory> cellFactory;
 
 
-///**
-// *  Reuse identifier
-// */
-//@property(nonatomic, copy) NSString *cellReuseIdentifier;
-//
-///**
-// *  Delegate
-// *
-// *  Can be used to make custom cell configurations. Delegate methods always have more priority.
-// */
-//@property(nonatomic, weak) id <APBaseDataSourceDelegate> delegate;
+@end
+
+
+
+@interface APArrayTableViewDataSource (Unavailable)
+
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end

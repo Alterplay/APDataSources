@@ -6,7 +6,7 @@
 
 
 
-@protocol APDataSource <NSObject>
+@protocol APDataProvider <NSObject>
 
 
 /**

@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APDataSource.h"
+#import "APDataProvider.h"
 
 
 
-@interface APArrayDataSource : NSObject <APDataSource>
+@interface APArrayDataSource : NSObject <APDataProvider>
 
 
 /**
