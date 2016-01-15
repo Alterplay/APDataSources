@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "APDataSources"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "One more implementation of UITableView and UICollectionView data sources."
   s.homepage         = "https://github.com/Alterplay/APDataSources"
   s.license          = 'MIT'
@@ -10,6 +10,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/Alterplay/APDataSources.git", :tag => s.version.to_s }
   
   s.ios.deployment_target = '7.0'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
 
