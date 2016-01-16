@@ -5,6 +5,7 @@
 
 #import "APArrayDataSource.h"
 #import "APBaseDataSourceDelegate.h"
+#import <UIKit/UIKit.h>
 
 
 @protocol APArrayCollectionViewDataSourceDelegate;

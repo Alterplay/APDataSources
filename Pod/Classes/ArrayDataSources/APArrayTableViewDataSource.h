@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "APArrayDataSource.h"
+#import <UIKit/UIKit.h>
 
 @protocol APBaseDataSourceDelegate;
 

@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "APFRCDataSource.h"
 #import "APUpdatableDataSourceDelegate.h"
+#import <UIKit/UIKit.h>
 
 @protocol APFRCTableViewDataSourceDelegate;
 
