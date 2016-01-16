@@ -29,6 +29,11 @@
     return self;
 }
 
+- (instancetype)init
+{
+    return nil;
+}
+
 #pragma mark - APDataSource
 
 - (NSArray *)objectsInSection:(NSUInteger)section
