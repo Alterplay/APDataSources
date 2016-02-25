@@ -26,6 +26,11 @@
     return nil;
 }
 
+- (void)dealloc
+{
+    _fetchedResultsController.delegate = nil;
+}
+
 #pragma mark - Public
 
 - (id <NSFetchedResultsSectionInfo>)sectionAtIndex:(NSInteger)section
