@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "APDataSources"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "One more implementation of UITableView and UICollectionView data sources."
   s.homepage         = "https://github.com/Alterplay/APDataSources"
   s.license          = 'MIT'
