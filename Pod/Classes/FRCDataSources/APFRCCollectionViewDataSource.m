@@ -94,7 +94,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
                                                                                                           forIndexPath:indexPath];
 
     /* Fetch object */
-    id model = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    id model = [self objectAtIndexPath:indexPath];
 
     if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:withModel:)]) {
         /* Custom cell configuration */
