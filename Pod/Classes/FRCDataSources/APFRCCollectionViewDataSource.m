@@ -32,6 +32,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
     if (self) {
         _delegate = delegate;
         _cellReuseIdentifier = reuseIdentifier;
+        _allowAnimatedUpdate = YES;
 
         _collectionView = collectionView;
         _collectionView.dataSource = self;
@@ -60,7 +61,7 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
     else {
         self.fetchedResultsController.delegate = self;
         [self.fetchedResultsController performFetch:nil];
-        [self.collectionView reloadData];
+        [self reloadData];
     }
 }
 
@@ -140,11 +141,28 @@ static NSString *const APDummySupplementaryViewIdentifier = @"APDummySupplementa
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.collectionView reloadData];
+    [self reloadData];
 
     /* Notify about changes if needed */
     if ([self.delegate respondsToSelector:@selector(dataSourceDidChanged:)]) {
         [self.delegate dataSourceDidChanged:self];
+    }
+}
+
+#pragma mark - Reload  
+
+- (void)reloadData
+{
+    if (self.allowAnimatedUpdate) {
+        void (^updates)() = ^{
+            NSInteger sectionsCount = [self.collectionView numberOfSections];
+            NSIndexSet *sections = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, (NSUInteger) sectionsCount)];
+            [self.collectionView reloadSections:sections];
+        };
+        [self.collectionView performBatchUpdates:updates completion:nil];
+    }
+    else {
+        [self.collectionView reloadData];
     }
 }
 

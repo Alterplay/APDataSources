@@ -55,6 +55,7 @@
                                                                          fetchedResultsController:self.fetchedResultsControllerMock
                                                                               cellReuseIdentifier:nil
                                                                                          delegate:self.delegateMock];
+    self.collectionViewDataSource.allowAnimatedUpdate = NO;
 }
 
 - (void)testCollectionViewInitializer

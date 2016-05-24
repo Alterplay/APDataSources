@@ -52,6 +52,11 @@
  */
 @property(weak, nonatomic, readonly) UICollectionView *collectionView;
 
+/**
+*  Update collection view animated (default is YES)
+*/
+@property(nonatomic, assign) BOOL allowAnimatedUpdate;
+
 
 @end
 
